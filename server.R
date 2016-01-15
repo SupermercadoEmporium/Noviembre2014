@@ -26,7 +26,7 @@ output$confidenceNoviembre<-renderPrint({
 output$liftNoviembre<-renderPrint({
   x<-input$select
   y<-input$select2
-  paste("Lift",round(round(a_matrix_Noviembre[x,y], digits=4)/(round(a_matrix_Noviembre[x,x], digits=4)*round(a_matrix_Noviembre[y,y], digits=4)), digits=4))
+  paste("Lift",round(round(a_matrix_Noviembre[x,y]/a_matrix_Noviembre[x,x], digits=4)/round(a_matrix_Noviembre[y,y], digits=4), digits=4))
 })
 
 output$tablanamecat1Noviembre<-renderText({
